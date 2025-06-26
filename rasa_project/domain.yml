@@ -1,0 +1,46 @@
+version: "3.1"
+
+intents:
+  - login_issue
+  - password_reset
+  - still_issue
+  - fallback
+  - thank_you
+  - goodbye
+  - greet
+  - how_are_you
+  - bot_name
+  - login_followup_device
+  - affirm
+  - deny
+  - escalate_to_support
+  - password_reset_not_working
+  - share_additional_details
+  - login_followup_error
+  - provide_email
+
+entities:
+  - user_email
+
+slots:
+  user_lang:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  user_email:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: user_email
+      - type: from_text
+
+actions:
+  - action_multilingual_response
+  - action_send_reset_email
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

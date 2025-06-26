@@ -1,0 +1,10 @@
+{
+  "0": "escalate_to_support",
+  "1": "login_followup_device",
+  "2": "login_followup_error",
+  "3": "login_issue",
+  "4": "password_reset",
+  "5": "password_reset_not_working",
+  "6": "share_additional_details",
+  "7": "still_issue"
+}

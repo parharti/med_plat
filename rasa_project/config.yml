@@ -1,0 +1,10 @@
+language: en
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+
+policies:
+- name: RulePolicy
+assistant_id: 20250608-104221-indigo-tangerine

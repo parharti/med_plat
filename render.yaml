@@ -5,6 +5,9 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
     plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
 
   - type: web
     name: medplat-rasa-server
@@ -15,6 +18,9 @@ services:
       rasa train
     startCommand: cd rasa_project && rasa run --enable-api --cors "*" --port 8080
     plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
 
   - type: web
     name: medplat-actions
@@ -22,8 +28,11 @@ services:
     buildCommand: |
       cd rasa_project
       pip install -r requirements.txt
-    startCommand: cd rasa_project && rasa run actions --port 5055
+    startCommand: cd rasa_project && cd actions && rasa run actions --port 5055
     plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
 
   - type: web
     name: medplat-middleware
@@ -33,3 +42,6 @@ services:
       pip install -r requirements.txt
     startCommand: cd middleware && gunicorn server:app
     plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10

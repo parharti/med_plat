@@ -24,6 +24,6 @@ WORKDIR /app
 ENTRYPOINT []
 USER 1001
 
-EXPOSE 5005 5055
+EXPOSE 10000 5055
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]

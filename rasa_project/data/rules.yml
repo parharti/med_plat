@@ -1,67 +1,73 @@
 version: "3.1"
 
 rules:
-  - rule: respond to greet
+
+# Greetings & Small Talk
+  - rule: Respond to greetings
     steps:
       - intent: greet
       - action: action_multilingual_response
 
-  - rule: respond to thank_you
-    steps:
-      - intent: thank_you
-      - action: action_multilingual_response
-
-  - rule: respond to goodbye
+  - rule: Respond to farewell
     steps:
       - intent: goodbye
       - action: action_multilingual_response
 
-  - rule: respond to how_are_you
+  - rule: Respond to gratitude
+    steps:
+      - intent: thank_you
+      - action: action_multilingual_response
+
+  - rule: Respond to how are you
     steps:
       - intent: how_are_you
       - action: action_multilingual_response
 
-  - rule: respond to bot_name
+  - rule: Respond to bot name
     steps:
       - intent: bot_name
       - action: action_multilingual_response
-  
-  - rule: Handle login issue
+
+# Issue Handling
+  - rule: Handle login issues
     steps:
       - intent: login_issue
       - action: action_multilingual_response
 
-  - rule: Handle password reset
+  - rule: Handle password reset request
     steps:
       - intent: password_reset
       - action: action_multilingual_response
 
-  - rule: Handle still issue
+  - rule: Handle ongoing issue
     steps:
       - intent: still_issue
       - action: action_multilingual_response
 
-  - rule: Handle affirm
+# Confirmation/Denial
+  - rule: Handle user confirmation
     steps:
       - intent: affirm
       - action: action_multilingual_response
 
-  - rule: Handle deny
+  - rule: Handle user denial
     steps:
       - intent: deny
       - action: action_multilingual_response
 
-  - rule: Handle fallback
+# Fallbacks & Escalation
+  - rule: Handle fallback intent
     steps:
       - intent: fallback
       - action: action_multilingual_response
 
-  - rule: Handle escalate to support
+  - rule: Escalate to support
     steps:
       - intent: escalate_to_support
       - action: action_multilingual_response
 
-  - rule: Handle email and send reset
+# Email-based Reset
+  - rule: Handle email submission
     steps:
-     - intent: provide_email
-     - action: action_send_reset_email
+      - intent: provide_email
+      - action: action_send_reset_email

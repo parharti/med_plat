@@ -137,7 +137,7 @@ HTML_TEMPLATE = """
     </style>
 </head>
 <body>
-    <h2>Chat with MedPlat Bot 🌐</h2>
+    <h2>Chat with MedPlat</h2>
     <button class="toggle-theme" onclick="toggleTheme()">Toggle Dark Mode</button>
 
     <div class="chatbox">

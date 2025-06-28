@@ -21,6 +21,7 @@ nlu:
     - I keep getting an error while logging in
     - My login credentials are not working
     - The login page doesn’t load
+    - मैं लॉग इन नहीं कर पा रही हूँ।
 
 - intent: password_reset
   examples: |
@@ -164,5 +165,3 @@ nlu:
     - My email is [abc@gmail.com](user_email)
     - [jane.doe@yahoo.com](user_email)
     - It's [user@example.com](user_email)
-
-

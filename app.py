@@ -3,7 +3,9 @@ import requests
 from datetime import datetime
 
 app = Flask(__name__)
-MIDDLEWARE_CHAT_URL = "https://server-py-ebxq.onrender.com"
+MIDDLEWARE_CHAT_URL = "https://server-py-ebxq.onrender.com/chat"
+
+
 chat_memory = []
 
 

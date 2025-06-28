@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 sarvam_client = SarvamAI(api_subscription_key="b5d9635d-8168-411e-9ed8-0c2e33114f5a")
 
 # Rasa server URL
-RASA_SERVER_URL = "http://127.0.0.1:5005/webhooks/rest/webhook"
+RASA_SERVER_URL = " https://med-plat-4.onrender.com/webhooks/rest/webhook"
 
 @app.route("/chat", methods=["POST"])
 def chat():
@@ -49,7 +49,7 @@ def chat():
 
         # ✅ Step 3: Set slot in Rasa tracker
         requests.post(
-            f"http://l127.0.0.1:5005/conversations/{sender_id}/tracker/events",
+            f" https://med-plat-4.onrender.com/conversations/{sender_id}/tracker/events",
             json={
                 "event": "slot",
                 "name": "user_lang",

@@ -1,50 +1,6 @@
 services:
   - type: web
-    name: medplat-frontend
-    env: python
-    buildCommand: ./build.sh
-    startCommand: gunicorn app:app
-    plan: free
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10
-
-  - type: web
-    name: medplat-rasa-server
-    env: python
-    buildCommand: |
-      cd rasa_project
-      pip install --upgrade pip setuptools wheel
-      pip install -r requirements.txt
-      rasa train
-    startCommand: cd rasa_project && rasa run --enable-api --cors "*" --port 8080
-    plan: free
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10
-
-  - type: web
-    name: medplat-actions
-    env: python
-    buildCommand: |
-      cd rasa_project
-      pip install --upgrade pip setuptools wheel
-      pip install -r requirements.txt
-    startCommand: cd rasa_project/actions && rasa run actions --port 5055
-    plan: free
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10
-
-  - type: web
-    name: medplat-middleware
-    env: python
-    buildCommand: |
-      cd middleware
-      pip install --upgrade pip setuptools wheel
-      pip install -r requirements.txt
-    startCommand: cd middleware && gunicorn server:app
-    plan: free
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10
+    name: rasa-chatbot
+    env: docker
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true

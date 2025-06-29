@@ -20,5 +20,7 @@ RUN chmod +x start.sh
 USER 1001
 EXPOSE 5005 5055
 
+# Fix to override default Rasa entrypoint
+ENTRYPOINT ["/bin/bash"]
 CMD ["./start.sh"]
 

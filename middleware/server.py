@@ -8,8 +8,9 @@ logging.basicConfig(level=logging.INFO)
 
 sarvam_client = SarvamAI(api_subscription_key="b5d9635d-8168-411e-9ed8-0c2e33114f5a")
 
-RASA_BASE_URL = "https://a86a94c1cd4d.ngrok-free.app"
+RASA_BASE_URL = "https://a5c755bdb241.ngrok-free.app"
 RASA_SERVER_URL = f"{RASA_BASE_URL}/webhooks/rest/webhook"
+
 
 @app.route("/chat", methods=["POST"])
 def chat():

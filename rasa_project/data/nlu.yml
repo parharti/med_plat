@@ -165,3 +165,16 @@ nlu:
     - My email is [abc@gmail.com](user_email)
     - [jane.doe@yahoo.com](user_email)
     - It's [user@example.com](user_email)
+
+- intent: work
+  examples: |
+    - Will it work?
+    - Is it working?
+    - Does this really work?
+    - Will this be successful?
+    - Will the chatbot respond?
+    - Will the system work properly?
+    - Will this feature work now?
+    - Can I expect it to work?
+    - Is it functional?
+    - Is it operational?

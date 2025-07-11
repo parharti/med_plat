@@ -18,6 +18,7 @@ intents:
   - share_additional_details
   - login_followup_error
   - provide_email
+  - work
 
 entities:
   - user_email

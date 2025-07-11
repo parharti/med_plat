@@ -35,7 +35,8 @@ INTENTS = {
     "bot_name": "I'm your multilingual assistant.",
     "affirm": "Awesome!",
     "deny": "Alright, let me know if you need anything else.",
-    "fallback": "Sorry, I didn’t understand that. Can you rephrase?"
+    "fallback": "Sorry, I didn’t understand that. \n Can you rephrase?",
+    "work": "It should be working now! 😊\n But if you still face any issues, let me know — I’ll escalate it to human support for you."
 }
 
 FOLLOW_UPS = {

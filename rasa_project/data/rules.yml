@@ -71,3 +71,9 @@ rules:
     steps:
       - intent: provide_email
       - action: action_send_reset_email
+
+# Email-based Reset
+  - rule: will it work
+    steps:
+      - intent: work
+      - action: action_multilingual_response

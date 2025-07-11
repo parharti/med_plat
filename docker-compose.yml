@@ -1,0 +1,12 @@
+services:
+  rasa:
+    platform: linux/amd64
+    build:
+      context: .
+      args:
+        ENV: ${ENV:-development}
+    environment:
+      - ENV=${ENV:-development}
+    ports:
+      - "5005:5005"
+

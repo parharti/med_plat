@@ -1,16 +1,12 @@
 #!/bin/bash
-set -e
 
-echo "🟢 Starting Rasa action server..."
-rasa run actions &
+echo "Starting action server on port 5055..."
+rasa run actions --port 5055 &
 
-echo "🟢 Starting main Rasa server..."
+echo "Starting Rasa server on port ${PORT:-5005}..."
 rasa run \
   --enable-api \
-  --model /app/rasa_project/models \
-  --endpoints /app/rasa_project/endpoints.yml \
+  --port ${PORT:-5005} \
   --cors "*" \
-  --debug
-
-wait
-
+  --endpoints /app/rasa_project/endpoints.yml \
+  --model /app/rasa_project/models
